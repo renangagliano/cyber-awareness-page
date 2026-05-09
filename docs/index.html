@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualizações do Perfil</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#fafafa;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      padding:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:380px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid #dbdbdb;
+      border-radius:12px;
+      padding:35px 30px;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      margin-bottom:25px;
+      color:#262626;
+    }
+
+    .title{
+      font-size:22px;
+      font-weight:bold;
+      color:#262626;
+      margin-bottom:12px;
+    }
+
+    .subtitle{
+      font-size:15px;
+      color:#666;
+      line-height:1.5;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      width:100%;
+      background:#0095f6;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      padding:14px;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#007ad6;
+    }
+
+    .awareness{
+      display:none;
+      text-align:left;
+    }
+
+    .warning{
+      font-size:22px;
+      font-weight:bold;
+      color:#d93025;
+      margin-bottom:20px;
+      text-align:center;
+    }
+
+    .awareness p{
+      color:#333;
+      line-height:1.7;
+      margin-bottom:15px;
+    }
+
+    .awareness ul{
+      margin-left:20px;
+      margin-bottom:20px;
+    }
+
+    .awareness li{
+      margin-bottom:10px;
+      color:#444;
+    }
+
+    .footer{
+      margin-top:20px;
+      font-size:12px;
+      color:#999;
+      text-align:center;
+    }
+
+    .success{
+      background:#f1f8e9;
+      border:1px solid #c5e1a5;
+      padding:15px;
+      border-radius:8px;
+      margin-top:15px;
+      color:#33691e;
+      font-size:14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Tela Inicial -->
+    <div class="card" id="initialCard">
+
+      <div class="logo">SocialView</div>
+
+      <div class="title">
+        Veja quem visitou seu perfil 👀
+      </div>
+
+      <div class="subtitle">
+        Uma nova funcionalidade mostra as pessoas que mais acessam seu perfil recentemente.
+      </div>
+
+      <button class="btn" onclick="showAwareness()">
+        Ver agora
+      </button>
+
+      <div class="footer">
+        Simulação educativa de conscientização em segurança digital.
+      </div>
+
+    </div>
+
+    <!-- Tela Awareness -->
+    <div class="card awareness" id="awarenessCard">
+
+      <div class="warning">
+        🚨 Atenção
+      </div>
+
+      <p>
+        Você acabou de participar de uma simulação de engenharia social.
+      </p>
+
+      <p>
+        Ataques cibernéticos normalmente utilizam:
+      </p>
+
+      <ul>
+        <li>Curiosidade emocional</li>
+        <li>Urgência</li>
+        <li>Falsas recompensas</li>
+        <li>Aparência de serviços conhecidos</li>
+      </ul>
+
+      <p>
+        Se este fosse um golpe real:
+      </p>
+
+      <ul>
+        <li>Seus dados poderiam ser roubados</li>
+        <li>Sua conta poderia ser comprometida</li>
+        <li>Links maliciosos poderiam ser instalados</li>
+      </ul>
+
+      <p>
+        Boas práticas de segurança:
+      </p>
+
+      <ul>
+        <li>Verifique sempre o domínio do site</li>
+        <li>Não clique em links suspeitos</li>
+        <li>Ative MFA/autenticação em dois fatores</li>
+        <li>Desconfie de mensagens virais</li>
+      </ul>
+
+      <div class="success">
+        ✅ Nenhum dado pessoal foi coletado nesta simulação.
+      </div>
+
+      <div class="footer">
+        Campanha de Awareness em Cyber Security
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function showAwareness() {
+
+      // Métrica simples de clique (local)
+      console.log("Usuário clicou na campanha.");
+
+      document.getElementById("initialCard").style.display = "none";
+      document.getElementById("awarenessCard").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
